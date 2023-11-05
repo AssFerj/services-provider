@@ -1,13 +1,18 @@
 'use client'
 import React from 'react'
-import "@flaticon/flaticon-uicons/css/all/all.css";
+import "@flaticon/flaticon-uicons/css/all/all.css"
 import defaultTheme from '@/config/themes/defultTheme'
 import { ThemeProvider } from '@emotion/react'
-import { Box, Button, Typography, Grid, Paper } from '@mui/material'
+import { Box, Button, Typography, Grid, Paper, ImageList, ImageListItem } from '@mui/material'
 import encanador from '../../public/encanador-hero.png'
-import Image from 'next/image';
+import Image from 'next/image'
 import './global.css'
-import { servicesCards } from '@/utils/servicesCards';
+import { servicesCards } from '@/utils/servicesCards'
+import cardBg from '../../public/card-bg.webp'
+import img01 from '../../public/01.jpg'
+import img02 from '../../public/02.jpg'
+import img03 from '../../public/03.jpg'
+import img04 from '../../public/04.jpg'
 
 export default function Home() {
   return (
@@ -164,7 +169,10 @@ export default function Home() {
                   padding: 3,
                   width: 150,
                   height: 200,
-                  borderRadius: 5
+                  borderRadius: 5,
+                  backgroundImage: `url(${cardBg})`,
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover'
                 }}
               >
                 <Typography 
@@ -199,7 +207,7 @@ export default function Home() {
                   textAlign={'center'}
                   color={defaultTheme.palette.primary.main}
                 >
-                  Explore Our Services nd Solutions, Trusted Plumbing Professionals
+                  Explore Our Services and Solutions, Trusted Plumbing Professionals
                 </Typography>
                 <Box
                   sx={{
@@ -217,6 +225,144 @@ export default function Home() {
                   >Lern More</Button>
                 </Box>
               </Paper>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          spacing={1}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
+          wrap="wrap"
+          bgcolor="#f7f7f7"
+          py={10}
+          width={"100%"}
+        >
+          <Grid item width={400}>
+          <ImageList variant="masonry" cols={2} gap={8}>
+              <ImageListItem>
+                <Image
+                  src={img01}
+                  width={150}
+                  height={100} 
+                  alt={''}  
+                  style={{
+                    borderRadius: 20
+                  }}              
+                />
+              </ImageListItem>
+              <ImageListItem>
+                <Image
+                  src={img02}
+                  width={150}
+                  height={100} 
+                  alt={''}      
+                  style={{
+                    borderRadius: 20
+                  }}             
+                />
+              </ImageListItem>
+              <ImageListItem>
+                <Image
+                  src={img03}
+                  width={150}
+                  height={100} 
+                  alt={''}        
+                  style={{
+                    borderRadius: 20
+                  }}           
+                />
+              </ImageListItem>
+              <ImageListItem>
+                <Image
+                  src={img04}
+                  width={150}
+                  height={100}  
+                  alt={''}    
+                  style={{
+                    borderRadius: 20
+                  }}               
+                />
+              </ImageListItem>
+          </ImageList>
+          </Grid>
+          <Grid item>
+            <Typography 
+              variant="h5" 
+              color={defaultTheme.palette.primary.main} 
+              textAlign={'start'}
+              fontWeight={'bold'}
+            >
+                We Are Avilble 24/7
+            </Typography>
+            <Typography 
+              variant="h5" 
+              color={defaultTheme.palette.primary.main} 
+              textAlign={'start'}
+              fontWeight={'bold'}
+            >
+              Emergency Service
+            </Typography>
+            <Typography 
+              variant="body2" 
+              color={defaultTheme.palette.primary.main}
+              width={400}
+              mt={2}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet mollitia deserunt ipsam dolor nulla accusantium modi officia animi.
+            </Typography>
+            <Paper 
+              elevation={3} 
+              sx={{
+                mt: 3,
+                p: 2,
+                borderRadius: 5,
+                bgcolor: defaultTheme.palette.primary.contrastText
+                }}
+              >
+              <Typography 
+                variant="body2" 
+                color={defaultTheme.palette.primary.main}
+                width={400}
+                mt={2}
+              >
+                &#x2B9A; Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </Typography>
+              <Typography 
+                variant="body2" 
+                color={defaultTheme.palette.primary.main}
+                width={400}
+                mt={2}
+              >
+                &#x2B9A; Eveniet mollitia deserunt ipsam dolor nulla accusantium modi officia animi.
+              </Typography>
+            </Paper>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          spacing={1}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
+          py={10}
+          wrap="wrap"
+          width={'100%'}
+          bgcolor={defaultTheme.palette.primary.main}
+          color={defaultTheme.palette.primary.contrastText}
+        >
+          <Grid item>
+            <Typography 
+              variant="h5"
+              fontWeight={'bold'}
+            >
+              That's How We Work
+            </Typography>
+          </Grid>
+          <Grid item>
+            
           </Grid>
         </Grid>
       </ThemeProvider>
