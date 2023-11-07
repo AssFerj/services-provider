@@ -14,6 +14,10 @@ import img01 from '../../public/01.jpg'
 import img02 from '../../public/02.jpg'
 import img03 from '../../public/03.jpg'
 import img04 from '../../public/04.jpg'
+import icon01 from '../../public/icon01.png'
+import icon02 from '../../public/icon02.png'
+import icon03 from '../../public/icon03.png'
+import icon04 from '../../public/icon04.png'
 
 export default function Home() {
   return (
@@ -362,8 +366,128 @@ export default function Home() {
               That's How We Work
             </Typography>
           </Grid>
-          <Grid item>
-            
+          <Grid container 
+            pt={5}
+            spacing={8}
+            display={'flex'}
+            justifyContent={'center'}
+          >
+            <Grid item>
+              <Image 
+                src={icon01} 
+                alt={''} 
+                width={50} 
+                style={{
+                  borderRadius: 50,
+                  borderColor: defaultTheme.palette.primary.main,
+                  borderStyle: 'dashed',
+                  borderWidth: 1
+                }}/>
+                <Box 
+                  sx={{
+                    zIndex: 9999,
+                    py: .5,
+                    mt: -2.5,
+                    width: 23,
+                    borderRadius: 50,
+                    bgcolor: defaultTheme.palette.secondary.main
+                  }}
+                >
+                  <Typography 
+                    variant="body1" 
+                    color="primary" 
+                    textAlign={'center'}
+                    fontSize={10}
+                  >1</Typography>
+                </Box>
+   
+             </Grid>
+             
+            <Grid item>
+              <Image 
+                src={icon02} 
+                alt={''} 
+                width={50} 
+                style={{
+                  borderRadius: 50,
+                  borderColor: defaultTheme.palette.primary.main,
+                }}/>
+                <Box 
+                  sx={{
+                    zIndex: 9999,
+                    py: .5,
+                    mt: -2.5,
+                    width: 23,
+                    borderRadius: 50,
+                    bgcolor: defaultTheme.palette.secondary.main
+                  }}
+                >
+                  <Typography 
+                    variant="body1" 
+                    color="primary" 
+                    textAlign={'center'}
+                    fontSize={10}
+                  >2</Typography>
+                </Box>
+            </Grid>
+            <Grid item>
+              <Image 
+                src={icon03} 
+                alt={''} 
+                width={50} 
+                style={{
+                  borderRadius: 50,
+                  borderColor: defaultTheme.palette.primary.main,
+                  borderStyle: 'dashed',
+                  borderWidth: 1
+                }}/>
+                <Box 
+                  sx={{
+                    zIndex: 9999,
+                    py: .5,
+                    mt: -2.5,
+                    width: 23,
+                    borderRadius: 50,
+                    bgcolor: defaultTheme.palette.secondary.main
+                  }}
+                >
+                  <Typography 
+                    variant="body1" 
+                    color="primary" 
+                    textAlign={'center'}
+                    fontSize={10}
+                  >3</Typography>
+                </Box>
+            </Grid>
+            <Grid item>
+              <Image 
+                src={icon04} 
+                alt={''} 
+                width={50} 
+                style={{
+                  borderRadius: 50,
+                  borderColor: defaultTheme.palette.primary.main,
+                  borderStyle: 'dashed',
+                  borderWidth: 1
+                }}/>
+                <Box 
+                  sx={{
+                    zIndex: 9999,
+                    py: .5,
+                    mt: -2.5,
+                    width: 23,
+                    borderRadius: 50,
+                    bgcolor: defaultTheme.palette.secondary.main
+                  }}
+                >
+                  <Typography 
+                    variant="body1" 
+                    color="primary" 
+                    textAlign={'center'}
+                    fontSize={10}
+                  >4</Typography>
+                </Box>
+            </Grid>
           </Grid>
         </Grid>
       </ThemeProvider>
