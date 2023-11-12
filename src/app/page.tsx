@@ -4,7 +4,7 @@ import React from 'react'
 import "@flaticon/flaticon-uicons/css/all/all.css"
 import defaultTheme from '@/config/themes/defultTheme'
 import { ThemeProvider } from '@emotion/react'
-import { Box, Button, Typography, Grid, Paper, ImageList, ImageListItem } from '@mui/material'
+import { Box, Button, Typography, Grid, Paper, ImageList, ImageListItem, FormControl, FormLabel, FormGroup, FormHelperText, TextField } from '@mui/material'
 import encanador from '../../public/encanador-hero.png'
 import Image from 'next/image'
 import './global.css'
@@ -352,7 +352,8 @@ export default function Home() {
           justifyContent="center"
           alignItems="center"
           alignContent="center"
-          py={10}
+          py={20}
+          px={{sm: 10, md: 20, xl: 60}}
           wrap="wrap"
           width={'100%'}
           bgcolor={defaultTheme.palette.primary.main}
@@ -367,12 +368,19 @@ export default function Home() {
             </Typography>
           </Grid>
           <Grid container 
-            pt={5}
+            pt={6}
             spacing={8}
             display={'flex'}
             justifyContent={'center'}
           >
-            <Grid item>
+            <Grid item
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              xl={3}
+              md={6}
+            >
               <Image 
                 src={icon01} 
                 alt={''} 
@@ -381,13 +389,13 @@ export default function Home() {
                   borderRadius: 50,
                   borderColor: defaultTheme.palette.primary.main,
                   borderStyle: 'dashed',
-                  borderWidth: 1
+                  borderWidth: 1                
                 }}/>
                 <Box 
                   sx={{
-                    zIndex: 9999,
                     py: .5,
-                    mt: -2.5,
+                    mt: -2,
+                    ml: 5,
                     width: 23,
                     borderRadius: 50,
                     bgcolor: defaultTheme.palette.secondary.main
@@ -400,10 +408,37 @@ export default function Home() {
                     fontSize={10}
                   >1</Typography>
                 </Box>
-   
+                <Box
+                  maxWidth={250}
+                >
+                  <Typography 
+                    mt={2}
+                    variant="body1" 
+                    fontWeight={'bold'} 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    Book Online or With Phone
+                  </Typography>
+                  <Typography 
+                    mt={2}
+                    variant="body2" 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </Typography>
+                </Box>
              </Grid>
              
-            <Grid item>
+            <Grid item
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              xl={3}
+              md={6}
+            >
               <Image 
                 src={icon02} 
                 alt={''} 
@@ -414,9 +449,9 @@ export default function Home() {
                 }}/>
                 <Box 
                   sx={{
-                    zIndex: 9999,
                     py: .5,
-                    mt: -2.5,
+                    mt: -2,
+                    ml: 5,
                     width: 23,
                     borderRadius: 50,
                     bgcolor: defaultTheme.palette.secondary.main
@@ -429,8 +464,36 @@ export default function Home() {
                     fontSize={10}
                   >2</Typography>
                 </Box>
+                <Box
+                  maxWidth={250}
+                >
+                  <Typography 
+                    mt={2}
+                    variant="body1" 
+                    fontWeight={'bold'} 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    We Identify That Problem
+                  </Typography>
+                  <Typography 
+                    mt={2}
+                    variant="body2" 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </Typography>
+                </Box>
             </Grid>
-            <Grid item>
+            <Grid item
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              xl={3}
+              md={6}
+            >
               <Image 
                 src={icon03} 
                 alt={''} 
@@ -443,9 +506,9 @@ export default function Home() {
                 }}/>
                 <Box 
                   sx={{
-                    zIndex: 9999,
                     py: .5,
-                    mt: -2.5,
+                    mt: -2,
+                    ml: 5,
                     width: 23,
                     borderRadius: 50,
                     bgcolor: defaultTheme.palette.secondary.main
@@ -458,8 +521,36 @@ export default function Home() {
                     fontSize={10}
                   >3</Typography>
                 </Box>
+                <Box
+                  maxWidth={250}
+                >
+                  <Typography 
+                    mt={2}
+                    variant="body1" 
+                    fontWeight={'bold'} 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    Our Professional Arive
+                  </Typography>
+                  <Typography 
+                    mt={2}
+                    variant="body2" 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </Typography>
+                </Box>
             </Grid>
-            <Grid item>
+            <Grid item
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              xl={3}
+              md={6}
+            >
               <Image 
                 src={icon04} 
                 alt={''} 
@@ -472,9 +563,9 @@ export default function Home() {
                 }}/>
                 <Box 
                   sx={{
-                    zIndex: 9999,
                     py: .5,
-                    mt: -2.5,
+                    mt: -2,
+                    ml: 5,
                     width: 23,
                     borderRadius: 50,
                     bgcolor: defaultTheme.palette.secondary.main
@@ -487,7 +578,85 @@ export default function Home() {
                     fontSize={10}
                   >4</Typography>
                 </Box>
+                <Box
+                  maxWidth={250}
+                >
+                  <Typography 
+                    mt={2}
+                    variant="body1" 
+                    fontWeight={'bold'} 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    We Solve Your Problem
+                  </Typography>
+                  <Typography 
+                    mt={2}
+                    variant="body2" 
+                    textAlign={'center'}
+                    color={defaultTheme.palette.primary.contrastText}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </Typography>
+                </Box>
             </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          spacing={1}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
+          wrap="wrap"
+          px={20}
+          mt={-10}
+        >
+          <Grid item
+            flex={1}
+            sx={{
+              height: '100%',
+              padding: 3,
+              borderRadius: '5px 0 0 5px',
+              bgcolor: defaultTheme.palette.primary.contrastText
+            }}
+          >
+            Image
+          </Grid>
+          <Grid item
+            flex={5}
+            sx={{
+              px: 3,
+              py: 5,
+              borderRadius: '0 5px 5px 0',
+              bgcolor: defaultTheme.palette.secondary.main
+            }}
+          >
+            <Typography 
+              variant="h6" 
+              fontWeight={'bold'} 
+              color="initial"
+            >
+              Professional Plumbing Maintenance Will Save Time And Money
+            </Typography>
+            <FormControl>
+              <FormGroup>
+                <TextField
+                  id="name"
+                  label="Name"
+                  type='text'
+                  size='small'
+                  value={''}
+                  onChange={()=>{}}
+                  sx={{
+                    bgcolor: defaultTheme.palette.primary.contrastText,
+                    borderRadius: 10,
+                    border: 'none'
+                  }}
+                />
+              </FormGroup>
+            </FormControl>
           </Grid>
         </Grid>
       </ThemeProvider>
