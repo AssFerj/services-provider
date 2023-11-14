@@ -18,6 +18,7 @@ import icon01 from '../../public/icon01.png'
 import icon02 from '../../public/icon02.png'
 import icon03 from '../../public/icon03.png'
 import icon04 from '../../public/icon04.png'
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 export default function Home() {
   return (
@@ -616,19 +617,39 @@ export default function Home() {
           <Grid item
             flex={1}
             sx={{
-              height: '100%',
-              padding: 3,
+              width: 300,
+              height: 224,
+              padding: 0,
               borderRadius: '5px 0 0 5px',
-              bgcolor: defaultTheme.palette.primary.contrastText
+              bgcolor: defaultTheme.palette.primary.contrastText,
+              backgroundImage: `url(${img01})`,
+              backgroundSize: 'cover'
             }}
           >
-            Image
+            <PlayCircleIcon 
+              sx={{
+                // position: 'absolute',
+                // top: '50%',
+                // left: '50%',
+                // color: defaultTheme.palette.primary.contrastText,
+                fontSize: 100
+              }}
+            />
+            {/* <Image 
+              src={img01} 
+              alt={''} 
+              style={{
+                width: '100%'
+              }} /> */}
           </Grid>
           <Grid item
             flex={5}
             sx={{
-              px: 3,
-              py: 5,
+              p: 5,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
               borderRadius: '0 5px 5px 0',
               bgcolor: defaultTheme.palette.secondary.main
             }}
@@ -640,9 +661,19 @@ export default function Home() {
             >
               Professional Plumbing Maintenance Will Save Time And Money
             </Typography>
-            <FormControl>
-              <FormGroup>
+            <Grid
+              container
+              spacing={1}
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              alignContent="center"
+              wrap="wrap"
+              mt={2}
+            >
+              <Grid item md={6}>
                 <TextField
+                  fullWidth
                   id="name"
                   label="Name"
                   type='text'
@@ -651,12 +682,46 @@ export default function Home() {
                   onChange={()=>{}}
                   sx={{
                     bgcolor: defaultTheme.palette.primary.contrastText,
-                    borderRadius: 10,
-                    border: 'none'
+                    borderRadius: 2
                   }}
                 />
-              </FormGroup>
-            </FormControl>
+              </Grid>
+              <Grid item md={6}>
+                <TextField
+                  fullWidth
+                  id="email"
+                  label="Email"
+                  type='email'
+                  size='small'
+                  value={''}
+                  onChange={()=>{}}
+                  sx={{
+                    bgcolor: defaultTheme.palette.primary.contrastText,
+                    borderRadius: 2
+                  }}
+                />
+              </Grid>
+              <Grid item md={6}>
+                <TextField
+                  fullWidth
+                  id="message"
+                  label="Message"
+                  type='text'
+                  size='small'
+                  value={''}
+                  onChange={()=>{}}
+                  sx={{
+                    bgcolor: defaultTheme.palette.primary.contrastText,
+                    borderRadius: 2
+                  }}
+                />
+              </Grid>
+              <Grid item md={6}>
+                <Button variant="contained" color="primary" fullWidth>
+                    Book a Service
+                </Button>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </ThemeProvider>
